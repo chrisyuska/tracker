@@ -1,0 +1,41 @@
+<% content_for :sub_nav do %>
+  <% if current_user.admin? %>
+    <li><%= link_to "Delete User", user_path(@user), :method => :delete, :confirm => "Are you sure?" %></li>
+    <li>|</li>
+  <% end %>
+<% end %>
+
+<h2>Edit <%= @user.name %></h2>
+
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this tour from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p><%= f.label :name %><br />
+  <%= f.text_field :name %></p>
+  
+  <p><%= f.label :email %><br />
+  <%= f.text_field :email %></p>
+ 
+  <p><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <%= f.password_field :password %></p>
+
+  <p><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></p>
+
+  <% if current_user.admin? %>
+    <p><%= f.label :admin, "Has administrator priviledges?" %>
+    <%= f.check_box :admin %></p>
+  <% end %>
+ 
+  <p><%= f.submit "Update" %></p>
+<% end %>

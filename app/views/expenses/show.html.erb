@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Created by:</b>
+  <%= @expense.created_by %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @expense.category %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @expense.amount %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @expense.comments %>
+</p>
+
+<p>
+  <b>Paid:</b>
+  <%= @expense.paid %>
+</p>
+
+
+<%= link_to 'Edit', edit_expense_path(@expense) %> |
+<%= link_to 'Back', expenses_path %>

@@ -1,0 +1,26 @@
+<% content_for :sub_nav do %>
+  <% if current_user.admin? %>
+    <li><%= link_to "Add A User", new_user_path %></li>
+    <li>|</li>
+  <% end %>
+<% end %>
+
+<h1>All Employees</h1>
+
+<table id="users">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Last Signed In</th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= link_to_if (current_user.id == user.id or current_user.admin?), user.name, user_path(user) %></td>
+    <td><%= user.email %></td>
+    <td><%= user.last_sign_in_at.nil? ? 'Never' : "#{time_ago_in_words(user.last_sign_in_at)} ago" %></td>
+    <td><%= link_to 'Edit', edit_user_path(:id => user.id) if current_user.admin? || current_user.email == user.email %>
+  </tr>
+<% end %>
+</table>

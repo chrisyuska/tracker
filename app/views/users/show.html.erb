@@ -1,0 +1,8 @@
+<% content_for :sub_nav do %>
+  <li><%= link_to "All Users", users_path %></li>
+  <li>|</li>
+<% end %>
+
+<h1><%= @user.name %></h1>
+<h3><%= @user.email %></h3>
+<h3><%= @user.last_sign_in_at %></h3>

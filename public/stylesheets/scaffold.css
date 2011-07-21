@@ -1,0 +1,153 @@
+html, body {
+  height: 100%; 
+  background: #000;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Jura', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0em;
+  word-spacing: 0em;
+  line-height: 1.2;
+  color: #FFF;
+}
+
+div {
+  width: 760px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+div.backdrop {
+  width: 100%;
+  min-height: 100%;
+  background: -moz-linear-gradient(top, #222 0%, #000 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#222), color-stop(100%,#000)); /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#000',GradientType=0 ); /* ie */
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+ a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+div.container a:visited {
+  color: #CCC;
+}
+
+ a:hover {
+  color: #AAA;
+}
+
+div.header {
+  height: 150px;
+  text-shadow: 2px 2px 2px #aaa;
+}
+div.header {
+  font-size: 9em;
+}
+
+div.header p {
+  margin: 0;
+}
+
+div.header p span {
+  font-size: .2em;
+}
+
+div.sub_nav {
+  height: 40px;
+  text-align: right;
+  margin: 0 auto;
+}
+
+div.sub_nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.sub_nav li {
+  display: inline;
+  margin: 5px;
+}
+
+div.sub_nav a {
+}
+
+div.container {
+  margin: 20px auto;
+
+}
+
+div.main form {
+  text-align: left;
+  margin: 10px 100px;
+}
+
+div.main h1 {
+  text-align: center;
+}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  padding: 5px;
+  border-bottom: 1px solid #5F5F5F;
+}
+
+table td {
+  padding: 5px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+
