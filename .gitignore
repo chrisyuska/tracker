@@ -1,4 +1,7 @@
 .bundle
 db/*.sqlite3
 log/*.log
+config/database.yml
+config/initializers/EmailInitialization.rb
+config/environments/development.rb
 tmp/
