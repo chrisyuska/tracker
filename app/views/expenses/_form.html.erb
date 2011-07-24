@@ -18,7 +18,7 @@
   </div>
   <div class="field">
     <%= f.label :category %><br />
-    <%= f.select :category, categories.collect { |c| [ c.name ] }, :prompt => "Select a Category" %>
+    <%= f.select :category, @categories.collect { |c| [ c.name ] }, :prompt => "Select a Category" %>
     <%= link_to "New", new_category_path %>
   </div>
   <div class="field">

@@ -14,8 +14,6 @@ class ApplicationController < ActionController::Base
   #admin-only pages
   #
   def admins_only
-    unless current_user.admin?
-      redirect_to :back, :alert => "You must be signed in as administrator to do that."
-    end
+    redirect_to :back, :alert => "You must be signed in as administrator to do that." unless current_user.admin?
   end
 end
