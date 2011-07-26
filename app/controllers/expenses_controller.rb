@@ -1,6 +1,7 @@
 class ExpensesController < ApplicationController
   before_filter :authenticate_user!
   before_filter :admins_only, :only => [:destroy]
+  before_filter :set_categories, :only => [:new, :edit]
 
   # GET /expenses
   # GET /expenses.xml
@@ -89,5 +90,11 @@ class ExpensesController < ApplicationController
       format.html { redirect_to(expenses_url) }
       format.xml  { head :ok }
     end
+  end
+
+  private
+
+  def set_categories
+    @categories = Category.all
   end
 end
