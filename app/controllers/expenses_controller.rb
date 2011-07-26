@@ -6,8 +6,15 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.xml
   def index
-    @expenses = Expense.joins(:user)
-
+    #TODO: Sort by created_by is not working for some reason...
+    @expenses = Expense.joins(:user).sort{ |x,y| x[:created_by] <=> y[:created_by] }
+    @total = 0
+    @expenses.each do |e|
+      if e.cost == "Expense"
+        e.amount = -1 * e.amount.to_d
+      end
+      @total += e.amount
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @expenses }
