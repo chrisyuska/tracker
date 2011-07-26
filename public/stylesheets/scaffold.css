@@ -132,6 +132,7 @@ table td {
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
+  color: #000;
 }
 
 #error_explanation h2 {
@@ -149,5 +150,4 @@ table td {
   font-size: 12px;
   list-style: square;
 }
-
 
