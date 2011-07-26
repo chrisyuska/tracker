@@ -1,7 +1,7 @@
 class ExpensesController < ApplicationController
   before_filter :authenticate_user!
   before_filter :admins_only, :only => [:destroy]
-  before_filter :set_categories, :only => [:new, :edit]
+  before_filter :set_categories
 
   # GET /expenses
   # GET /expenses.xml
@@ -93,7 +93,6 @@ class ExpensesController < ApplicationController
   end
 
   private
-
   def set_categories
     @categories = Category.all
   end
