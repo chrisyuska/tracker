@@ -6,8 +6,7 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.xml
   def index
-    #TODO: Sort by created_by is not working for some reason...
-    @expenses = Expense.joins(:user).sort{ |x,y| x[:created_by] <=> y[:created_by] }
+    @expenses = Expense.joins(:user).sort{ |x,y| x[:created_at] <=> y[:created_at] }
     @total = 0
     @expenses.each do |e|
       if e.cost == "Expense"
