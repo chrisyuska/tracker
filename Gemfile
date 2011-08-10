@@ -1,12 +1,21 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
+#gem 'rails', '3.0.9'
+gem 'rails', '3.1.0.rc5'
 gem 'devise', '~> 1.4.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', '~> 0.2.6'
+gem 'mysql2', '>= 0.3'
+
+# Rails 3.1 - Asset pipeline
+gem 'json'
+gem 'sass'
+gem 'coffee-script'
+gem 'uglifier'
+# Rails 3.1 - javascript
+gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'
